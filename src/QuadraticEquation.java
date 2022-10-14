@@ -1,8 +1,14 @@
+import java.util.Scanner;
+
 public class QuadraticEquation {
     public static void main(String[] args) {
-        int a = 1;
-        int b = 2;
-        int c = -3;
+        Scanner a0 = new Scanner(System.in);
+        Scanner b0 = new Scanner(System.in);
+        Scanner c0 = new Scanner(System.in);
+        int a = a0.nextInt();
+        int b = b0.nextInt();
+        int c = c0.nextInt();
+
 
         int dis = b*b - 4*a*c;
         if (dis < 0) {
@@ -10,18 +16,15 @@ public class QuadraticEquation {
         }
         else {
             if (dis == 0) {
-                double x = (-1*b) / 2*a;
-                System.out.print("x = ");
-                System.out.print(x); // как сделать то же в одной строке?
+                double x = (double)(-1*b) / (2*a);
+                System.out.print("x = " + x);
             }
             else {
                 double sqrt = Math.sqrt(dis);
                 double x1 = (-1*b + sqrt) / 2*a;
                 double x2 = (-1*b - sqrt) / 2*a;
-                System.out.print("x1 = ");
-                System.out.println(x1); // как сделать то же в одной строке?
-                System.out.print("x2 = ");
-                System.out.print(x2); // как сделать то же в одной строке?
+                System.out.println("x1 = " + x1);
+                System.out.print("x2 = " + x2);
             }
         }
     }
